@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #4285f4;
+}
+.container {
+    width: 450px;
+    background: #fff;
+    border-radius: 12px;
+}
+.container h2 {
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: .01rem;
+    padding: 1rem 1.175rem;
+    border-bottom: 1px solid #d4dbe5;
+}
+.wrapper {
+    padding: 2.5rem 1.8rem;
+}
+.input-box {
+    position: relative;
+}
+.wrapper .input-box input {
+     padding: .75rem 1rem;
+     width: 100%;
+     background: none;
+     font-size: 1.5rem;
+     font-weight: 500;
+     border: 1px solid #aaa;
+     border-radius: 6px;
+     color: #000;
+}
+.input-box span {
+    position: absolute;
+    cursor: pointer;
+    right: 6px;
+    top: 10px;
+    line-height: 52px;
+    color:#707070;
+}
+.wrapper .pass-indicator {
+    background: #dfdfdf;
+    width: 100%;
+    margin-top: .75rem;
+    height: 4px;
+    position: relative;
+}
+.pass-indicator::before {
+    position:absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    border-radius: inherit  ;
+    transition: width .3s ease;
+}
+.pass-indicator#weak::before{
+    background:red;
+    width: 20%;
+}
+.pass-indicator#medium::before{
+    background:#f1c80b;
+    width: 50%;
+}
+.pass-indicator#strong::before {
+    background:green;
+    width: 100%;
+}
+.wrapper .pass-length {
+    padding: 20px 0px;
+}
+.pass-length .details {
+    display: flex;
+    justify-content: space-between;
+}
+.pass-length input {
+    width: 100%;
+    height: 5px;
+}
+.password-settings .options {
+   list-style: none;
+   padding: 15px 0px;
+   display: flex;
+   flex-wrap: wrap;
+}
+.password-settings .options .option {
+    display: flex;
+    align-items: center;
+    width: calc(100% / 2);
+}
+.options .option label {
+    cursor: pointer;
+    padding-left: .65rem;
+}
+.options .option input {
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+.options .option:nth-child(1) {
+    pointer-events: none;
+}
+.options .option:nth-child(1) input {
+    opacity: .7;
+}
+.generate-btn {
+    padding: .5rem 1rem;
+    width: 100%;
+    font-size: 1.06rem;
+    border-radius: 5px;
+    background: #4285f4;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
